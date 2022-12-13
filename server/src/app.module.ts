@@ -7,7 +7,7 @@ import { MongooseModule } from "@nestjs/mongoose";
   imports: [
     ConfigModule.forRoot(),
     ChatModule,
-    MongooseModule.forRoot("mongodb://localhost/lets_talk"),
+    MongooseModule.forRoot(process.env.MONGO_URL),
   ],
   providers: [ChatGateway],
 })
