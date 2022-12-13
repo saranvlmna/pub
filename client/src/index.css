@@ -57,8 +57,9 @@
 }
 .chat__users > * {
   margin-bottom: 10px;
-  color: #607eaa;
-  font-size: 14px;
+  color: #2b8f00;
+  font-size: 18px;
+  
 }
 .online__users > * {
   margin-bottom: 10px;
@@ -76,10 +77,11 @@
 }
 .leaveChat__btn {
   padding: 10px;
-  width: 150px;
-  border: none;
+  width: 100px;
+  border: 2px solid rgb(251, 162, 162);
+  border-radius: 19px;
   outline: none;
-  background-color: #d1512d;
+  background-color: #292929;
   cursor: pointer;
   color: #eae3d2;
 }
@@ -115,10 +117,11 @@
   padding: 15px;
 }
 .sendBtn {
-  width: 150px;
-  background-color: green;
+  width: 100px;
+  background-color: rgb(128, 128, 128);
   padding: 10px;
-  border: none;
+  border: 2px solid rgb(221, 200, 200);
+  border-radius: 19px;
   outline: none;
   color: #eae3d2;
   cursor: pointer;
