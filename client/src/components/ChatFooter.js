@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import socketIO from "socket.io-client";
-const socket = socketIO.connect("http://localhost:4578");
+import env from "react-dotenv";
+const socket = socketIO.connect(env.SERVER_URL);
 
 const ChatFooter = () => {
   const [message, setMessage] = useState("");

@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import socketIO from "socket.io-client";
-const socket = socketIO.connect("http://localhost:4578");
+import env from "react-dotenv";
+const socket = socketIO.connect(env.SERVER_URL);
 
 const ChatBody = ({ messages, lastMessageRef }) => {
   const navigate = useNavigate();
