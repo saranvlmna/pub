@@ -13,14 +13,16 @@ export class ChatGateway {
 
   @SubscribeMessage("newUser")
   async newUser(@MessageBody() data: any) {
-    await this.chatService.activeUser(data.userName);
+    await this.chatService.newUser(data);
+    await this.chatService.activeUser(data);
     const users = await this.chatService.findOnlineUser();
     this.server.emit("newUserResponse", users);
   }
 
   @SubscribeMessage("sendMessage")
-  async handleMessage(@MessageBody() message: any) {
-    this.server.emit("messageResponse", message);
+  async handleMessage(@MessageBody() data: any) {
+    await this.chatService.saveMesssage(data);
+    this.server.emit("messageResponse", data);
   }
 
   @SubscribeMessage("setOffline")
