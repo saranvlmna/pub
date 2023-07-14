@@ -15,23 +15,23 @@ export class ChatService {
 
   async newUser(data: any) {
     return this.userModel.create({
-      userName:data.userName,
-      socketId:data.socketID,
+      userName: data.userName,
+      socketId: data.socketID,
     });
   }
 
   async activeUser(data: any) {
     return this.liveModel.create({
-      userName:data.userName,
-      socketId:data.socketID,
+      userName: data.userName,
+      socketId: data.socketID,
     });
   }
 
   async saveMesssage(data: any) {
     return this.messageModel.create({
-      name:data.name,
-      socketId:data.socketID,
-      message:data.text
+      name: data.name,
+      socketId: data.socketID,
+      message: data.text,
     });
   }
 
